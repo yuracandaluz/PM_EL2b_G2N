@@ -34,8 +34,8 @@
  * um para a entrada e outro para os adicionais.</p>
  */
 public enum EClube {
-	PIPOCA(30, 20),
-	CINEFILO(40, 30);
+	PIPOCA(0.3, 0.2),
+	CINEFILO(0.4, 0.3);
 
 	private double descontoEntrada;
 	private double descontoAdicionais;

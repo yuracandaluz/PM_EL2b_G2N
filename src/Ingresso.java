@@ -59,7 +59,7 @@ public abstract class Ingresso {
 	/**
 	 * Lista de adicionais vinculados ao ingresso.
 	 */
-	private List<EAdicional> adicionais;
+	protected List<EAdicional> adicionais;
 
 	/**
 	 * Constrói um ingresso com filme e sessão.
@@ -108,6 +108,14 @@ public abstract class Ingresso {
 	 * @return valor final do ingresso
 	 */
 	public abstract double valorIngresso();
+
+	public double valorAdicionais() {
+		double total = 0;
+		for (EAdicional adicional : adicionais) {
+			total += adicional.valor();
+			
+		} return total;
+	}
 
 	/**
 	 * Gera a representação textual (cupom) do ingresso.
